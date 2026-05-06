@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 (function(){
   function fit(el){
     var sx=window.innerWidth/1920,sy=window.innerHeight/1080;
-    var s=Math.max(sx,sy);
+    var s=Math.min(sx,sy);
     el.style.position='absolute';
     el.style.left='50%';
     el.style.top='50%';
