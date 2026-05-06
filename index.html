@@ -17,6 +17,26 @@
       This page requires JavaScript to display.
     </div>
   </noscript>
+<style>
+  html,body{background:var(--cream,#F4ECE0)!important}
+  #stage{
+    transform:scale(var(--fit-scale,1))!important;
+    position:absolute!important;
+    left:50%!important;top:50%!important;
+    margin-left:-960px!important;margin-top:-540px!important;
+  }
+</style>
+<script>
+(function(){
+  function fit(){
+    var sx=window.innerWidth/1920,sy=window.innerHeight/1080;
+    var s=Math.max(sx,sy);
+    document.documentElement.style.setProperty('--fit-scale',s);
+  }
+  fit();
+  window.addEventListener('resize',fit);
+})();
+</script>
 </head>
 <body>
   <div id="__bundler_thumbnail">
